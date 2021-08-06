@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <title>Jenga Dice roll</title>
+</head>
+<body>
+  <div class="container">
+
+    <div class="header text-center my-3">
+      <div class="input-data row">
+        <div class="col-6 input-data-col text-center">
+          <label for="startVal">First Tile Number:</label>
+          <input type="number" name="startVal" id="startVal">
+        </div>
+        <div class="col-6 input-data-col text-center">
+          <label for="endVal">End Tile Number:</label>
+          <input type="number" name="endVal" id="endVal">
+        </div>
+      </div>
+      
+      <div class="buttons-row text-center my-4">
+
+        <button class="btn btn-secondary button mx-3" onclick="reset()">
+          Reset
+        </button>
+  
+        <button class="btn btn-primary button mx-3" onclick="rollIt()">
+          Roll the Dice!
+        </button>
+      </div>
+      <div class="tile generated-number" id="generated-number">
+      </div>
+    </div>
+    <div class="row">
+      
+      <div class="col-6 text-center">
+        <div class="title ">Pending Tile Numbers</div>
+        <div class="sub-title mb-5">Tap on any number to mark it as prohibited(which cannot be moved).</div>
+        <div class="tiles-container" id="available-tiles">
+          <!-- <div class="tile">23</div> -->
+        </div>
+      </div>
+
+      <div class=" col-3 text-center">
+        <div class="title mb-5">Top 2 rows</div>
+        <div class="tiles-container row" id="top-row-tiles">
+          <!-- <div class="tile">23</div> -->
+        </div>
+      </div>
+      
+      <div class=" col-3 text-center">
+        <div class="title mb-5">Prohibited</div>
+        <div class="tiles-container row" id="prohibited-tiles">
+          <!-- <div class="tile">23</div> -->
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.4/js/tether.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
+<script src="./index.js"></script>
+</html>

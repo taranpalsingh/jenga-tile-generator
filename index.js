@@ -4,8 +4,8 @@ let nums = [], topRowNums = [], prohibitedNums = [];
 $(document).ready(function(){
   console.log("hello");
   document.getElementById("startVal").value = 1;
-  document.getElementById("endVal").value = 100;
-  initializeNums(4, 52);
+  document.getElementById("endVal").value = 48;
+  initializeNums(1, 48);
   document.getElementById("generated-number").style.display = 'none';
 });
 
@@ -89,7 +89,7 @@ function createProhibitedNums() {
     let tileContainer = document.createElement('div');
     tileContainer.classList = 'prohibited-container';
     let tile = document.createElement('div');
-    tile.classList = 'tile';
+    tile.classList = 'tile text-center';
 
     tile.innerHTML = num;
     tileContainer.appendChild(tile)

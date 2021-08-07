@@ -13,11 +13,11 @@
 
     <div class="header text-center my-3">
       <div class="input-data row">
-        <div class="col-6 input-data-col text-center">
+        <div class="col-md-6 col-lg-6 col-12 input-data-col text-center">
           <label for="startVal">First Tile Number:</label>
           <input type="number" name="startVal" id="startVal">
         </div>
-        <div class="col-6 input-data-col text-center">
+        <div class="col-md-6 col-lg-6 col-12 input-data-col text-center">
           <label for="endVal">End Tile Number:</label>
           <input type="number" name="endVal" id="endVal">
         </div>
@@ -40,14 +40,15 @@
       
       <div class="col-6 text-center">
         <div class="title ">Pending Tile Numbers</div>
-        <div class="sub-title mb-5">Tap on any number to mark it as prohibited(which cannot be moved).</div>
+        <div class="sub-title mb-5">Tap on any number to mark it as prohibited (which cannot be moved).</div>
         <div class="tiles-container" id="available-tiles">
           <!-- <div class="tile">23</div> -->
         </div>
       </div>
 
       <div class=" col-3 text-center">
-        <div class="title mb-5">Top 2 rows</div>
+        <div class="title">Top 2 rows</div>
+        <div class="sub-title mb-5">These tiles are not considered while generating a new number.</div>
         <div class="tiles-container row" id="top-row-tiles">
           <!-- <div class="tile">23</div> -->
         </div>
@@ -60,6 +61,11 @@
         </div>
       </div>
 
+    </div>
+    <div class="row my-5">
+      <div class="title">How to use this web application?</div>
+      <p>Generally,numbered Jenga has 48 tiles, numbered from 1 to 48. On clicking the "Roll the Dice!" button, this application will provide you a random number that lies within the initial range, and then it will add this number to the "Top 2 rows" column. The top 2 rows are not considered for the next draw.</p>
+      <p>When you encounter a situation where there are only 1 or 2 tiles left in a row which cannot be moved, you can click on that number to mark it as prohibited. Have fun palaying Jenga!!</p>
     </div>
   </div>
 </body>
